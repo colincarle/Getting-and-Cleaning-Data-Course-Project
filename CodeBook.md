@@ -1,9 +1,17 @@
-## Getting and Cleaning Data Course Project (Code Book)
+# Getting and Cleaning Data Course Project (Code Book)
 
-The run_analysis.R script in this repository is designed to take the raw data set from [this link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and transform into a tidy data set as follows:
+The run_analysis.R script in this repository is designed to process the raw data set from [this link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and transform the data therein to a tidy data set as follows:
+* Merges the training set and the test set into one data set.
+* Preserves only the measurements on the mean and standard deviation for each measurement
+* Converts the numeric activity codes into descriptive activity names in the data set.
+* Labels the data set with descriptive variable names.
 
+When the analysis is complete, the script will output a second tidy, independent data set with the average of the individual variables for each activity and subject.
 
-Varible Name                | Brief Description
+The renamed variables and activity labels are listed below, and a description of the source features and their content is described below in the section labelled  
+> Feature Selection.
+
+#Varible Name               |#Brief Description
 ----------------------------|----
 subject                     | Subject (denoted as 1-30)
 activity                    | Activity (Walking, WalkingUpstairs, WalkingDownstairs, Sitting, Standing, Laying)
