@@ -1,6 +1,7 @@
-### Getting and Cleaning Data Course Project (Code Book)
+## Getting and Cleaning Data Course Project (Code Book)
 
-The run_analysis.R script in this repository is designed to take the data set from (this link)[http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones] and transfrom 
+The run_analysis.R script in this repository is designed to take the raw data set from [this link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and transform into a tidy data set as follows:
+
 
 Varible Name                | Brief Description
 ----------------------------|----
