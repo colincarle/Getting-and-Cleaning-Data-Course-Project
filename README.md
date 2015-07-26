@@ -1,5 +1,7 @@
 ## Getting and Cleaning Data Course Project.
 
+An analysis that tidies a data set.
+
 The files in the repo are:
 
 * data/UCI HAR Dataset - contains copies of the original readme and features file.

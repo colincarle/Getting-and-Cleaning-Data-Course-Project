@@ -69,7 +69,10 @@ mergedSet$activityCode   <- plyr::mapvalues(mergedSet$activityCode,
 names(mergedSet)[names(mergedSet) == 'activityCode'] <- 'activity'
 
 
-# create an index of the columns to be kept, and trim the dataset.
+# create an index of the columns to be kept, and trim the dataset. Note that
+# (1) only column names that match mean() and std() are kept.
+# (2) clean names remove special characters, and the clean names are re-written
+#     as the variable names.
 patterns   <- c("^subject$", "^activity$", "\\bmean()\\b", "\\bstd()\\b")
 index      <- grep(paste(patterns, collapse = "|"), colnames(mergedSet))
 trimmedSet <- mergedSet[index]
