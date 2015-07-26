@@ -1,8 +1,8 @@
 
-Varible Name                |
-----------------------------|
-subject                     |
-activity                    |
+Varible Name                | Brief Description
+----------------------------|----
+subject                     | Subject (denoted as 1-30)
+activity                    | Activity (Walking, WalkingUpstairs, Walking_Downstairs, Sitting, Standing, Laying
 tBodyAccMeanX               | 
 tBodyAccMeanY               | 
 tBodyAccMeanZ               | 
