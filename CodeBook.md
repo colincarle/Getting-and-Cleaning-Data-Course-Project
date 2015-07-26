@@ -10,75 +10,74 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-Varible Name                | Test
-----------------------------| -------------
-Content Cell                | Content Cell
-subject                     |
-activity                    |
-tBodyAccMeanX               |
-tBodyAccMeanY               |
-tBodyAccMeanZ               |
-tBodyAccStdX                |
-tBodyAccStdY                |
-tBodyAccStdZ                |
-tGravityAccMeanX            |
-tGravityAccMeanY            |
-tGravityAccMeanZ            |
-tGravityAccStdX             |
-tGravityAccStdY             |
-tGravityAccStdZ             |
-tBodyAccJerkMeanX           |
-tBodyAccJerkMeanY           |
-tBodyAccJerkMeanZ           |
-tBodyAccJerkStdX            |
-tBodyAccJerkStdY            |
-tBodyAccJerkStdZ            |
-tBodyGyroMeanX              |
-tBodyGyroMeanY              |
-tBodyGyroMeanZ              |
-tBodyGyroStdX               |
-tBodyGyroStdY               |
-tBodyGyroStdZ               |
-tBodyGyroJerkMeanX          |
-tBodyGyroJerkMeanY          |
-tBodyGyroJerkMeanZ          |
-tBodyGyroJerkStdX           |
-tBodyGyroJerkStdY           |
-tBodyGyroJerkStdZ           |
-tBodyAccMagMean             |
-tBodyAccMagStd              |        
-tGravityAccMagMean          |
-tGravityAccMagStd           |
-tBodyAccJerkMagMean         |
-tBodyAccJerkMagStd          |
-tBodyGyroMagMean            |
-tBodyGyroMagStd             |
-tBodyGyroJerkMagMean        |
-tBodyGyroJerkMagStd         |
-fBodyAccMeanX               |
-fBodyAccMeanY               |
-fBodyAccMeanZ               |
-fBodyAccStdX                |
-fBodyAccStdY                |
-fBodyAccStdZ                |
-fBodyAccJerkMeanX           |
-fBodyAccJerkMeanY           |
-fBodyAccJerkMeanZ           |
-fBodyAccJerkStdX            |
-fBodyAccJerkStdY            |
-fBodyAccJerkStdZ            |
-fBodyGyroMeanX              |
-fBodyGyroMeanY              |
-fBodyGyroMeanZ              |
-fBodyGyroStdX               |
-fBodyGyroStdY               |
-fBodyGyroStdZ               |
-fBodyAccMagMean             |
-fBodyAccMagStd              |
-fBodyBodyAccJerkMagMean     |
-fBodyBodyAccJerkMagStd      |
-fBodyBodyGyroMagMean        |
-fBodyBodyGyroMagStd         |
-fBodyBodyGyroJerkMagMean    |
-fBodyBodyGyroJerkMagStd     |
+Varible Name                | Time Domain Description
+----------------------------| Time Domain -------------
+subject                     | Time Domain Test 
+activity                    | Time Domain
+tBodyAccMeanX               | Time Domain
+tBodyAccMeanY               | Time Domain
+tBodyAccMeanZ               | Time Domain
+tBodyAccStdX                | Time Domain
+tBodyAccStdY                | Time Domain
+tBodyAccStdZ                | Time Domain
+tGravityAccMeanX            | Time Domain
+tGravityAccMeanY            | Time Domain
+tGravityAccMeanZ            | Time Domain
+tGravityAccStdX             | Time Domain
+tGravityAccStdY             | Time Domain
+tGravityAccStdZ             | Time Domain
+tBodyAccJerkMeanX           | Time Domain
+tBodyAccJerkMeanY           | Time Domain
+tBodyAccJerkMeanZ           | Time Domain
+tBodyAccJerkStdX            | Time Domain
+tBodyAccJerkStdY            | Time Domain
+tBodyAccJerkStdZ            | Time Domain
+tBodyGyroMeanX              | Time Domain
+tBodyGyroMeanY              | Time Domain
+tBodyGyroMeanZ              | Time Domain
+tBodyGyroStdX               | Time Domain
+tBodyGyroStdY               | Time Domain
+tBodyGyroStdZ               | Time Domain
+tBodyGyroJerkMeanX          | Time Domain
+tBodyGyroJerkMeanY          | Time Domain
+tBodyGyroJerkMeanZ          | Time Domain
+tBodyGyroJerkStdX           | Time Domain
+tBodyGyroJerkStdY           | Time Domain
+tBodyGyroJerkStdZ           | Time Domain
+tBodyAccMagMean             | Time Domain
+tBodyAccMagStd              | Time Domain        
+tGravityAccMagMean          | Time Domain
+tGravityAccMagStd           | Time Domain
+tBodyAccJerkMagMean         | Time Domain
+tBodyAccJerkMagStd          | Time Domain
+tBodyGyroMagMean            | Time Domain
+tBodyGyroMagStd             | Time Domain
+tBodyGyroJerkMagMean        | Time Domain
+tBodyGyroJerkMagStd         | Time Domain
+fBodyAccMeanX               | Time Domain
+fBodyAccMeanY               | Time Domain
+fBodyAccMeanZ               | Time Domain
+fBodyAccStdX                | Time Domain
+fBodyAccStdY                | Time Domain
+fBodyAccStdZ                | Time Domain
+fBodyAccJerkMeanX           | Time Domain
+fBodyAccJerkMeanY           | Time Domain
+fBodyAccJerkMeanZ           | Time Domain
+fBodyAccJerkStdX            | Time Domain
+fBodyAccJerkStdY            | Time Domain
+fBodyAccJerkStdZ            | Time Domain
+fBodyGyroMeanX              | Time Domain
+fBodyGyroMeanY              | Time Domain
+fBodyGyroMeanZ              | Time Domain
+fBodyGyroStdX               | Time Domain
+fBodyGyroStdY               | Time Domain
+fBodyGyroStdZ               | Time Domain
+fBodyAccMagMean             | Time Domain
+fBodyAccMagStd              | Time Domain
+fBodyBodyAccJerkMagMean     | Time Domain
+fBodyBodyAccJerkMagStd      | Time Domain
+fBodyBodyGyroMagMean        | Time Domain
+fBodyBodyGyroMagStd         | Time Domain
+fBodyBodyGyroJerkMagMean    | Time Domain
+fBodyBodyGyroJerkMagStd     | Time Domain
 
