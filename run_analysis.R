@@ -15,6 +15,7 @@ dataFileContents <- unzip(dataFile, list = TRUE)
 
 # extract the README.txt and features_info.txt
 unzip(dataFile, dataFileContents[4, 1], exdir = './data')
+unzip(dataFile, dataFileContents[3, 1], exdir = './data')
 
 # read the training activity labels, subjects and data.
 trainingLabels   <- read.table(unz(dataFile, dataFileContents[32, 1]),

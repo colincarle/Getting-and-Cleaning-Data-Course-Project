@@ -10,21 +10,22 @@ The run_analysis.R script in this repository is designed to process the raw data
 * When the analysis is complete, the script will output a second tidy, independent data set with the average of the individual variables for each activity and subject.
 
 To complete the task, the following steps/transformations were followed:
+
 1. Import the test/training data, labels(activity codes) and subject.
 2. Import the activity and feature labels.
 3. Attach the subject and activity codes to the data sets.
-4. Merge the data sets with `r rbind()`
+4. Merge the data sets with `rbind()`
 5. Attach the feature labels to the merged data set.
-6. Map the activity names to the activity code using `r plyr::mapvalues()`.
+6. Map the activity names to the activity code using `plyr::mapvalues()`.
 7. Filter and keep only data columns that match `subject`, `activity`, `mean()` and `std()`. Columns that do not match these expressions are discarded. 
 8. Clean the activity and feature labels with `gsub` and `grep`. Clean variable/label names are free of spaces; and special characers such as `-`, `()` and `_`. In addition, clean names will follow the format `firstSecondThird`.
-9. The data is reduced to molten form via `r melt()`, with id variables `subject` and `activity`. All remaining variables are considered measured variables.
-10. The molten/tall data is then recast - and aggregated with `mean` - into its wide form via `r dcast()`.
-11. Finally this separate, aggregated data is written to a file called _tidySet.txt_.
+9. The data is reduced to molten form via `melt()`, with id variables `subject` and `activity`. All remaining variables are considered measured variables.
+10. The molten/tall data is then recast - and aggregated with `mean` - into its wide form via `dcast()`.
+11. Finally this separate, aggregated data is written to a file called **_tidySet.txt_**.
 
 Note that for this tidy data set, mean and standard deviation for measurements were interepreted as features that ended in `mean()` and `std()`. Measurements not matching this format, such as `meanFreq` or `gravityMean` were discarded.
 
-The **Renamed Variables** and activity labels are listed below, and a description of the source features and their content is described below in the section labelled **Feature Selection**.
+The **Renamed Variables** and activity labels are listed below, and a description of the source features and their content is described below in the section labelled **Feature Selection**. This section has been copied and modified from the [source](https://github.com/colincarle/Getting-and-Cleaning-Data-Course-Project/blob/master/data/UCI%20HAR%20Dataset/features_info.txt) to correspond with this task.
 
 ### Renamed Variables
 Varible Name                |Brief Description
