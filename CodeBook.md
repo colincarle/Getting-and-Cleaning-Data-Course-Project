@@ -1,16 +1,32 @@
-# Getting and Cleaning Data Course Project (Code Book)
+## Getting and Cleaning Data Course Project (Code Book)
+
+Note that this file cites heavily the original README.txt and features\_info.txt text which have been preserved [here](https://github.com/colincarle/Getting-and-Cleaning-Data-Course-Project/blob/master/data/UCI%20HAR%20Dataset/README.txt) and [here](https://github.com/colincarle/Getting-and-Cleaning-Data-Course-Project/blob/master/data/UCI%20HAR%20Dataset/features_info.txt)
 
 The run_analysis.R script in this repository is designed to process the raw data set from [this link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and transform the data therein to a tidy data set as follows:
 * Merges the training set and the test set into one data set.
-* Preserves only the measurements on the mean and standard deviation for each measurement
+* Preserves only the data on the mean and standard deviation for each measurement.
 * Converts the numeric activity codes into descriptive activity names in the data set.
 * Labels the data set with descriptive variable names.
+* When the analysis is complete, the script will output a second tidy, independent data set with the average of the individual variables for each activity and subject.
 
-When the analysis is complete, the script will output a second tidy, independent data set with the average of the individual variables for each activity and subject.
+To complete the task, the following steps/transformations were followed:
+1. Import the test/training data, labels(activity codes) and subject.
+2. Import the activity and feature labels.
+3. Attach the subject and activity codes to the data sets.
+4. Merge the data sets with `r rbind()`
+5. Attach the feature labels to the merged data set.
+6. Map the activity names to the activity code using `r plyr::mapvalues()`.
+7. Filter and keep only data columns that match `subject`, `activity`, `mean()` and `std()`. Columns that do not match these expressions are discarded. 
+8. Clean the activity and feature labels with `gsub` and `grep`. Clean variable/label names are free of spaces; and special characers such as `-`, `()` and `_`. In addition, clean names will follow the format `firstSecondThird`.
+9. The data is reduced to molten form via `r melt()`, with id variables `subject` and `activity`. All remaining variables are considered measured variables.
+10. The molten/tall data is then recast - and aggregated with `mean` - into its wide form via `r dcast()`.
+11. Finally this separate, aggregated data is written to a file called _tidySet.txt_.
 
-The renamed variables and activity labels are listed below, and a description of the source features and their content is described below in the section labelled  
-[Feature Selection][id1].
+Note that for this tidy data set, mean and standard deviation for measurements were interepreted as features that ended in `mean()` and `std()`. Measurements not matching this format, such as `meanFreq` or `gravityMean` were discarded.
 
+The **Renamed Variables** and activity labels are listed below, and a description of the source features and their content is described below in the section labelled **Feature Selection**.
+
+### Renamed Variables
 Varible Name                |Brief Description
 ----------------------------|----
 subject                     | Subject (denoted as 1-30)
@@ -84,7 +100,7 @@ fBodyBodyGyroJerkMagStd     | Mean of source variable, see below.
 
 [id1]:
 
-##Feature Selection
+###Feature Selection
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
