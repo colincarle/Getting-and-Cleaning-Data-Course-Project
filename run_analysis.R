@@ -84,6 +84,4 @@ colnames(trimmedSet) <- cleanNames
 meltedSet <- melt(trimmedSet, id.vars = c("subject", "activity"))
 castedSet <- dcast(meltedSet, subject + activity ~ variable, mean)
 tidySet   <- castedSet[order(castedSet$subject, castedSet$activity), ]
-write.table(tidySet, file = "./tidySet.txt", row.name = FALSE)
-
-
+write.table(tidySet, file = "./tidySet.txt", row.names = FALSE)
